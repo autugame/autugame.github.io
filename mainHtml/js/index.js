@@ -1,0 +1,1 @@
+alert("我们是秋水团队我们想对你说的是访问这条链接https://wwc.lanzout.com/b030wi3uh并输入密码autu来获得科学上网")
