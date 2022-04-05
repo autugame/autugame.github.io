@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 
+			第二种方式吧css写道style标签里
+			p表示页面里的所有p元素
+			内部样式表
+		 -->
+		 <!-- 
+			外部样式表
+				然后通过link标签引入css
+		  -->
+		 <!-- <style>
+			/* p {
+				color: red;
+				font-size: 30px;
+			} */
+		 </style> -->
+		 <link rel="shortcut icon" href="https://www.iqiyipic.com/common/fix/128-128-logo.png" type="image/icon">
+		 <style>
+			p {
+				color: red;
+			}
+			#red {
+				color: green;
+			}
+			.a {
+				color: blue;
+			}
+			.abc {
+				color: aqua;
+			}
+			* {
+				font-size: 60px;
+			}
+		 </style>
+	</head>
+	<body>
+		<!-- 
+			网页分成三部分
+				结构(html)
+				表现（css)
+				行为（JavaScript）
+			css
+				层叠样式
+			第一种方式在标签内部通过style设置样式
+				内联样式
+				行内样式
+					如果要他们都要这种样式的话就需要复制
+					开发时一定不要使用内联样式
+		 -->
+		 <h1>标题</h1>
+		 <p id="red">少小离家老大回</p>
+		 <p class="a abc">少小离家老大回</p>
+		 <p class="a">少小离家老大回</p>
+		 <p>少小离家老大回</p>
+		 <iframe src="https://open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid=cf86ebba3151a69d7bfd7d7cd1318afd&tvId=8979945853843900&accessToken=2.ef9c39d6c7f1d5b44768e38e5243157d&appKey=8c634248790d4343bcae1f66129c1010&appId=1368&height=100%&width=100%" frameborder="0" allowfullscreen="true" width="100%" height="100%"></iframe>
+	</body>
+</html>
