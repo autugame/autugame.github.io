@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			p {
+				font-size: 20px;
+			}
+			p::first-letter {
+				font-size: 60px;
+			}
+			p::first-line {
+				background-color: red;
+			}
+			p::selection {
+				color: green;
+			}
+			div::before {
+				content: '你好';
+				color: red;
+			}
+			div::after {
+				content: '我们很喜欢';
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div>hello you</div>
+		<p>lorm</p>
+	</body>
+</html>
