@@ -1,13 +1,19 @@
 .download a {
 	color: #20A53A;
 	font-size: 18px;
-	
 }
 .download a:hover {
 	color: #008000
 }
 .download li{
 	padding: 10px;
+}
+.download li:hover{
+	background-color: #3F3F3F;
+	border-radius: 10px;
+}
+.download a:hover {
+	color: #E8E7E3;
 }
 .download li::before  {
 	content: "■";
