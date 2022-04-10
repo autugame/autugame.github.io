@@ -1,12 +1,17 @@
-@charset "utf-8";
-
-h1 {
-	text-align: center;
+.download a {
+	color: #20A53A;
+	font-size: 18px;
+	
 }
-.b {
-	text-align: center;
+.download a:hover {
+	color: #008000
 }
-a {
-	color: rgb(25, 216, 25);
+.download li{
+	padding: 10px;
 }
-
+.download li::before  {
+	content: "■";
+	font-size: 10px;
+	color: rgb(218, 218, 218);
+	margin-right: 4px;
+}
