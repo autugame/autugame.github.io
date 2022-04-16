@@ -1,0 +1,72 @@
+/* 主页index.html的样式表 */
+
+/* 顶部导航条的容器 */
+.topbar-wrapper {
+	/* 设置全屏宽度 */
+	width: 100%;
+	/* 设置行高 */
+	height: 40px;
+	line-height: 40px;
+	/* 设置被禁颜色 */
+	background-color: #333;
+}
+/* 设置超链接的颜色 */
+.topbar a { 
+	font-size: 12px;
+	color: #b0b0b0;
+	display: block;
+}
+.topbar a:hover {
+	color: #fff;
+}
+/* 设置中间分隔线 */
+.topbar .line {
+	font-size: 12px;
+	color: #424242;
+	margin: 0 8px;
+	margin-top: -1px;
+}
+/* 设置左侧导航栏 */
+.service, .topbar li{
+	float: left;
+}
+/* 设置下载app的下拉二维码 */
+.app .qrcode {
+	width: 128px;
+	line-height: 1px;
+	height: 148px;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .3)
+}
+/* 设置二维码图片 */
+.app .qrcode img {
+	width: 90px;
+	margin: 17px 17px;
+	margin-bottom: 14px;
+}
+/* 设置二维码下面的字体 */
+.app .qrcode span {
+	color: #000;
+	font-size: 14px;
+}
+/* 设置右侧导航栏 */
+.shop-cart, .user-info {
+	float: right;
+}
+.shop-cart {
+	margin-left: 26px;
+}
+/* 设置购物车的样式 */
+.shop-cart a {
+	width: 120px;
+	background-color: #424242;
+	text-align: center;
+}
+.shop-cart:hover a {
+	background-color: #FFF;
+	color: #FF6700;
+}
+.shop-cart i {
+	margin-right: 2px;
+}
