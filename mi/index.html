@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="./css/index.css">
 		<!-- 引入公共样式表 -->
 		<link rel="stylesheet" href="./css/base.css">
+		<link rel="icon" href="https://s01.mifile.cn/favicon.ico">
 	</head>
 	<body>
 		<!-- 创建顶部导航条 -->
@@ -41,7 +42,7 @@
 					<li class="line">|</li>
 					<li><a href="javascript:;">协议规则</a></li>
 					<li class="line">|</li>
-					<li>
+					<li class="app-wrapper">
 						<a class="app" href="javascript:;">
 					下载app
 					<!-- 添加一个弹出层 -->
@@ -56,10 +57,16 @@
 				</ul>
 				<!-- 购物车 -->
 				<ul class="shop-cart">
-					<li><a href="javascript:;">
-						<i class="fas fa-shopping-cart"></i>
-						购物车（0）
-					</a></li>
+					<li>
+						<a href="javascript:;">
+							<i class="fas fa-shopping-cart"></i>
+							购物车（0）
+						</a>
+						<!-- 添加一个购物车的弹出层 -->
+						<div class="qrcode-shop-cart">
+							<span>您的购物车中还没有商品哦~</span>
+						</div>
+					</li>
 				</ul>
 				<!-- 用户登录注册 -->
 				<ul class="user-info">
@@ -69,6 +76,32 @@
 					<li class="line">|</li>
 					<li><a href="javascript:;">消息通知</a></li>
 				</ul>
+			</div>
+		</div>
+		<!-- 创建一个头部的容器 -->
+		<div class="header-wrapper">
+			<div class="header w clearfix">
+				<!-- 创建一个logo -->
+				<h1 class="logo" title="小米复刻，如果你能加群我们能更好的为你提供帮助">
+					小米官网
+					<a href="/" class="home"></a>
+					<a href="/" class="mi"></a>
+				</h1>
+				<!-- 创建一个中间的导航条 -->
+				<div class="nav-wrapper">
+					<!-- 创建一个导航条 -->
+					<ul class="nav clearfix">
+						<li><a href="#">Xiaomi手机</a></li>
+						<li><a href="#">Redmi手机</a></li>
+						<li><a href="#">电视</a></li>
+						<li><a href="#">笔记本</a></li>
+						<li><a href="#">平板</a></li>
+						<li><a href="#">家电</a></li>
+						<li><a href="#">路由器</a></li>
+						<li><a href="#">服务</a></li>
+						<li><a href="#">社区</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</body>
