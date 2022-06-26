@@ -14,7 +14,7 @@ public class Text2{
 		short s = 10;
 		//s = (short)(s + 1);
 		//s += 1;
-		System.out.println(s);+
+		System.out.println(s);
 		//返回值为boolean类型
 		System.out.println(x == y);
 		//创建一个键盘输入的工具

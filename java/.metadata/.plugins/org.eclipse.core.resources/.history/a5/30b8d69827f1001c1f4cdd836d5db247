@@ -1,0 +1,23 @@
+package com.vince.ex;
+/**
+ * 异常处理
+ * @company
+ * @author autuo
+ * @description
+ */
+public class ExceptionDemo {
+
+	public static void main(String[] args) {
+		
+	}
+	/**
+	 * 除法运算
+	 * @param num1
+	 * @param num2
+	 */
+	private static void div(int num1, int num2) {
+		int result = num1/num2;
+		System.out.println(result);
+	}
+
+}
