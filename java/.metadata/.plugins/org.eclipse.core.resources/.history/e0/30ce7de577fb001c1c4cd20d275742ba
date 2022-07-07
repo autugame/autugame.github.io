@@ -1,0 +1,9 @@
+package com.autuo;
+
+public class MathDemo {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

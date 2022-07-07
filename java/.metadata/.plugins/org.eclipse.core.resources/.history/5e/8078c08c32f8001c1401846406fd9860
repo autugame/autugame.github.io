@@ -1,0 +1,25 @@
+package com.autuo;
+
+import java.util.Arrays;
+
+public class StringDemo2 {
+	public static void main(String[] args) {
+		String str = "ajdjwidjskw11111111111111111222222222222222233333333333412342";
+		char c = str.charAt(5);
+		System.out.println(c);
+		System.out.println(str.toCharArray());
+		char[] d = str.toCharArray();
+		for (int i : d) {
+			System.out.println(i);
+		}
+		char[] cs = {'a', 'b', 'c'};
+		String s1 = new String(cs);
+		System.out.println(s1);
+		String s2 = new String(cs, 0, 1);
+		System.out.println(s2);
+		
+		System.out.println(Arrays.toString(str.getBytes()));
+		System.out.println(str.replace('w', '*'));
+		System.out.println(str.replaceAll("/d", "*"));;
+	}
+}

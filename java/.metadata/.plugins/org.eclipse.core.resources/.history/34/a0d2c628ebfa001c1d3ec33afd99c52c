@@ -1,0 +1,18 @@
+package com.autuo;
+
+import java.util.Locale;
+
+/**
+ * 程序国际化
+ * @company
+ * @author autuo
+ * @description
+ */
+public class I18NDemo {
+	
+	public static void main(String[] args) {
+		//创建一个本地语言环境对象
+		Locale locale_cn = new Locale("zh", "CN");
+	}
+	
+}

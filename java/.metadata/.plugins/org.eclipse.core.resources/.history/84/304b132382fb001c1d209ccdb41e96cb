@@ -1,0 +1,12 @@
+package com.autuo;
+
+import java.util.Date;
+
+public class DateDemo {
+
+	public static void main(String[] args) {
+		Date date = new Date(3000);
+		System.out.println(date);
+	}
+	
+}
