@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class ExceptionDemo {
 
 	public static void main(String[] args) {
-		div(10, 2);
+		div(10, 0);
 		method();
 		try {
 			div2(20, 0);
@@ -33,6 +33,7 @@ public class ExceptionDemo {
 	private static void div(int num1, int num2) {
 		int[] arr = { 1, 2, 3, 4, 5 };
 		try {
+			System.out.println(num1 / num2);
 			System.out.println(arr[4]);
 			arr = null;
 			System.out.println(arr[4]);
@@ -40,6 +41,7 @@ public class ExceptionDemo {
 			System.out.println("result=" + result);
 		} catch (ArithmeticException e) {
 			System.out.println("尊敬的用户除数不能为零");
+			e.printStackTrace();
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("数组下标越界");
 		} catch (NullPointerException e) {

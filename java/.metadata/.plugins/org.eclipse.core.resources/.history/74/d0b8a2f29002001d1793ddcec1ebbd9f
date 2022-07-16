@@ -1,0 +1,15 @@
+package com.autuo;
+
+import java.io.InputStream;
+
+public class ChangeStreamDemo {
+
+	private static void in(InputStream in) {
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

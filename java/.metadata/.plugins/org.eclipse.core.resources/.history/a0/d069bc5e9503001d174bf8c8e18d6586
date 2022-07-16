@@ -1,0 +1,17 @@
+package com.autuo;
+
+import java.io.ByteArrayInputStream;
+
+public class ByteArrayStreamDemo {
+	
+	private static void byteArray() {
+		String s = "1432764123fejkerjj(2743723284&%^%$$#$$%^&&";
+		ByteArrayInputStream bais = new ByteArrayInputStream(s.getBytes());
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+	
+}

@@ -1,0 +1,43 @@
+package com.autuo;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.Graphics;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+public class ByteStringDemo extends Frame{
+	public static final int Line_x = 40;
+	public static final int Line_y = 40;
+	public static final int Dt = 15;
+	
+	public void Backgroundset() {
+		this.setSize(Line_x*Dt+5,Line_y*Dt+5);
+		this.setResizable(false); 
+		this.setBackground(Color.gray);
+		this.setVisible(true);
+		this.addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosing(WindowEvent e) {
+				System.exit(0);
+			}
+		});
+	}
+	
+	public void paint(Graphics g) {
+		Color c = g.getColor();
+		g.setColor(Color.GRAY);
+		g.fillRect(5, 5, Line_x*Dt,Line_y*Dt);
+		g.setColor(Color.DARK_GRAY);
+		for(int i=0;i<=Line_y;i++) {
+		g.drawLine(i*Dt, 0, i*Dt,Line_y*Dt);
+		}
+		for(int i=0;i<=Line_x;i++) {
+		g.drawLine(0, i*Dt, Line_x*Dt, i*Dt);
+		}
+		g.setColor(c);
+	}
+	
+	public static void main(String[] args) {
+		new Background().Backgroundset();
+	}
+}
