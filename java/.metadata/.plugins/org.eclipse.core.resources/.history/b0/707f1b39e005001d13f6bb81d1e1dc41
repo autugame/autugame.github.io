@@ -66,10 +66,10 @@ public class FileDivisionMergeDemo {
 	private static void merge(Enumeration<InputStream> es) {
 		SequenceInputStream sis = new SequenceInputStream(es);
 		try {
-			BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("D:\\test\\autuo.mp4"));
+			BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("autuo.mp4"));
 			byte[] bytes = new byte[1024];
 			int len = -1;
-			while ((len = sis.read(bytes)) != -1) {
+			while ((len = sis.read()) != -1) {
 				bos.write(bytes, 0, len);
 				bos.flush();
 			}
@@ -86,8 +86,8 @@ public class FileDivisionMergeDemo {
 	}
 
 	public static void main(String[] args) {
-//		File file = new File("D:\\autuo.mp4");
-//		division(file, 1024 * 1024);
+		//File file = new File("D:\\autuo.mp4");
+		//division(file, 1024 * 1024);
 		try {
 			InputStream in1 = new FileInputStream(new File("D:\\test\\1-tempautuo.mp4"));
 			InputStream in2 = new FileInputStream(new File("D:\\test\\2-tempautuo.mp4"));
