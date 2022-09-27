@@ -1,0 +1,26 @@
+/* 公共的样式 */
+.clearfix::before,
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+/* 去除a的下滑线 */
+a {
+	text-decoration: none;
+	color: #333;
+}
+body {
+	font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+	/* 设置所有字体的颜色 */
+	color: #333;
+	/* 设置容器的最小宽度 */
+	min-width: 1126px;
+}
+/* 设置一个类表示中间容器的宽度 */
+.w {
+	/* 固定容器宽度 */
+	width: 1126px;
+	/* 设置容器居中 */
+	margin: 0 auto;
+}
