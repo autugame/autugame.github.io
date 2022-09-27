@@ -1,0 +1,13 @@
+package com.autuo;
+
+import java.io.File;
+
+public class FileDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		File f1 = new File("D:\\Projects\\Text");
+		System.out.println("\\n");
+		}
+
+}

@@ -1,0 +1,15 @@
+package com.autuo;
+
+import java.io.File;
+
+public class FileDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		File f1 = new File("D:" + File.separator + "Projects" + File.separator + "Text" + File.separator + "autuo.txt");
+		if (!f1.exists()) {
+			System.out.println("false");
+		}
+		}
+
+}

@@ -1,0 +1,35 @@
+package com.guava;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Lists;
+
+public class GuavaDemo {
+	
+	@Test
+	private static void testGuava2() {
+		List<String> list = Lists.newArrayList("java", "php", "c++", "c", "h5", "javascript");
+		
+	}
+	
+	@Test
+	public void testGuava() {
+		System.out.println("test guava");
+		//List<String> list = Arrays.asList("jack", "tom", "lily", "bin");
+		List<String> list = new ArrayList<>();
+		list.add("jack");
+		list.add("tom");
+		list.add("lily");
+		list.add("bin");
+		//
+		//List<String> readList = Collections.unmodifiableList(list);
+		//readList.add("this");
+		ImmutableList<String> iList =  ImmutableList.of("jack", "tom", "lily", "bin");
+		
+	}
+	
+}

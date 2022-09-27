@@ -1,0 +1,11 @@
+package com.guava;
+
+import org.junit.Test;
+
+public class GuavaDemo {
+	
+	@Test
+	public void testGuava() {
+		System.out.println("test guava");
+	}
+}

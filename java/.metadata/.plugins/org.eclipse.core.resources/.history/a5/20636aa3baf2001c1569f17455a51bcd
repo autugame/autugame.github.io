@@ -1,0 +1,5 @@
+package com.vince.ex;
+
+public class MyException {
+
+}

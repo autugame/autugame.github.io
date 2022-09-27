@@ -1,0 +1,12 @@
+package com.autuo;
+
+import java.util.Arrays;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		int[] nums = { 34, 35, 36, 37, 2938, 81203498, 183471 };
+		Arrays.sort(nums);
+	}
+	
+}

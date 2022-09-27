@@ -1,0 +1,5 @@
+package com.autuo;
+
+public interface IEat {
+	public abstract void eat(String thing, String name);
+}

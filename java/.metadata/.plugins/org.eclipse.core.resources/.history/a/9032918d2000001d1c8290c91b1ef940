@@ -1,0 +1,27 @@
+package com.autuo;
+
+import java.io.File;
+import java.io.IOException;
+
+public class FileDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		File f1 = new File("D:" + File.separator + "Projects" + File.separator + "Text" + File.separator + "autuo.txt");
+		if (!f1.exists()) {
+			try {
+				f1.createNewFile();
+				System.out.println("文件创建成功");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} else {
+			System.out.println("文件已存在");
+		}
+		//System.out.println(f1.isFile());
+		File f2 = new File("D:\\Projects\\Text\\my");
+		f2.delete();
+		}
+
+}

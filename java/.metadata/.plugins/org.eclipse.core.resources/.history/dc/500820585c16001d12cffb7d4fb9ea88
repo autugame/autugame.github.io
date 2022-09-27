@@ -1,0 +1,34 @@
+package com.autuo;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class MapDemo {
+	
+	private static void hashMap() {
+		Map<Integer, String> map = new HashMap<>();
+		map.put(1, "小张");
+		map.put(2, "小李");
+		map.put(3, "小王");
+		map.put(4, "小刘");
+		map.put(5, "小坤");
+		
+		System.out.println(map.size());
+		//从里面取值
+		System.out.println(map.get(1));//典型的通过key取值
+		
+		//map的遍历
+		Set<Entry<Integer, String>> entrySet = map.entrySet();
+		entrySet.forEach(System.out::println);
+		for (Entry e : entrySet) {
+			System.out.println(e.getKey() + "->" + e.getValue());
+		}
+	}
+	
+	public static void main(String[] args) {
+		hashMap();
+	}
+
+}

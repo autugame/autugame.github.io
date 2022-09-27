@@ -1,0 +1,109 @@
+package com.guava;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Set;
+
+import org.junit.Test;
+
+import com.google.common.base.Function;
+import com.google.common.base.Functions;
+import com.google.common.collect.Collections2;
+import com.google.common.collect.HashMultiset;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Sets;
+import com.google.common.collect.Sets.SetView;
+
+public class GuavaDemo {
+	
+	@Test
+	public void testGuava6() {
+		String s = "good good study day day up";
+		String[] ss = s.split(" ");
+		HashMultiset<String> set = HashMultiset.create();
+		for (String str : ss) {
+			set.add(str);
+		}
+		
+		Set<String> set2 = set.elementSet();
+		for (String str : set2) {
+			System.out.println(str + ":" + set.count(str));
+		}
+	}
+	
+	@Test
+	public void testGuava5() {
+		Set<Integer> set1 = Sets.newHashSet(1, 2, 3);
+		Set<Integer> set2 = Sets.newHashSet(3, 4, 5);
+		
+		//SetView<Integer> v1 = Sets.intersection(set1, set2);
+		//v1.forEach(System.out::println);
+		
+		SetView<Integer> v2 = Sets.difference(set1, set2);
+		v2.forEach(System.out::println);
+		
+		SetView<Integer> v3 = Sets.union(set1, set2);
+		v3.forEach(System.out::println);
+	}
+	
+	@Test
+	public void testGuava4() {
+		List<String> list = Lists.newArrayList("java", "php", "c++", "c", "h5", "javascript");
+		Function<String, String> f1 = new Function<String, String>() {
+
+			@Override
+			public String apply(String t) {
+				return t.length() > 4 ? t.substring(0, 4) : t;
+			}
+			
+		};
+		Function<String, String> f2 = new Function<String, String>() {
+			
+			@Override
+			public String apply(String t) {
+				return t.toUpperCase();
+			}
+			
+		};
+		
+		Function<String, String> f = Functions.compose(f1, f2);
+		Collection<String> coll = Collections2.transform(list, f);
+		
+		coll.forEach(System.out::println);
+	}
+	
+	@Test
+	public void testGuava3() {
+		Set<Long> timeSet = Sets.newHashSet(20121212L, 20220818L, 20160808L);
+		Collection<String> timeCollect = Collections2.transform(timeSet, (e) -> new SimpleDateFormat("yyyy-MM-dd").format(e));
+		timeCollect.forEach(System.out::println);
+	}
+	
+	@Test
+	public void testGuava2() {
+		List<String> list = Lists.newArrayList("java", "php", "c++", "c", "h5", "javascript");
+		Collection<String> result = Collections2.filter(list, (e) -> e.startsWith("j"));
+		result.forEach(System.out::println);
+	}
+	
+	
+	@Test
+	public void testGuava() {
+		System.out.println("test guava");
+		//List<String> list = Arrays.asList("jack", "tom", "lily", "bin");
+		List<String> list = new ArrayList<>();
+		list.add("jack");
+		list.add("tom");
+		list.add("lily");
+		list.add("bin");
+		//
+		//List<String> readList = Collections.unmodifiableList(list);
+		//readList.add("this");
+		ImmutableList<String> iList =  ImmutableList.of("jack", "tom", "lily", "bin");
+		
+	}
+	
+}
