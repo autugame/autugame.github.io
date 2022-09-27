@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans>
+    <bean id="clothesService" class="com.vince.service.impl.ClothesServiceImpl"></bean>
+    <bean id="userService" class="com.vince.service.impl.UserServiceImpl"></bean>
+    <bean id="orderService" class="com.vince.service.impl.OrderServiceImpl"></bean>
+</beans>

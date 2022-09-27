@@ -1,0 +1,20 @@
+[
+  {
+    "id": 91283479827498,
+    "text": "How do I read a Json stream in java?",
+    "geo": null,
+    "user": {
+      "name": "json_newb",
+      "followers_count": 41
+    }
+  },
+  {
+    "id": 9128347982742348,
+    "text": "@java",
+    "geo": [21.141, -1482.60077],
+    "user": {
+      "name": "jesse",
+      "followers_count": 2
+    }
+  }
+]
