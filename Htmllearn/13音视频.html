@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 
+				audio用来引入音平
+				默认情况下不允许用户自己控制
+				autoplay自动播放
+				如果设置了这个打开之后音乐会自动播放
+				controls允许用户控制播放
+				播放完成再次播放
+				loop音乐是否循环播放
+				除了可以通过src指定文件路劲意外还可以通过source来指定文件
+				embed老版本音频播放器
+				具体用发
+				<embed src="" type="">必须指定大小width height type指定文件类型
+				type="audio/mp3"
+				可以把这个放到audio标签里面用来兼容老板本浏览其
+				video向网页引入视频
+		 -->
+		<audio controls>
+			对不起你的浏览器不支持音频，请升级浏览器！
+			<source src="./souse/Limp%20Bizkit%20-%20Just%20Like%20This.mp3">
+		</audio>
+		<video controls>
+			<source src="./souse/5e70cfbc8b6bb.mp4">
+		</video>
+		<iframe src="https://open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid=963e4677aa0c3cf639cfd8315e1c8440&tvId=6984959390820200&accessToken=2.ef9c39d6c7f1d5b44768e38e5243157d&appKey=8c634248790d4343bcae1f66129c1010&appId=1368&height=100%&width=100%" frameborder="0" allowfullscreen="true" width="100%" height="100%"></iframe>
+	</body>
+</html>
