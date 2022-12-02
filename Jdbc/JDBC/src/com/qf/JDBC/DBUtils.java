@@ -21,7 +21,7 @@ public class DBUtils {
     public static Connection getConnection() {
         Connection connection = null;
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_company", "root", "A3452896431@a");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_company", "root", "");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

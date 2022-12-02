@@ -10,7 +10,7 @@ public class QueryJDBC2 {
         //1,注册驱动
         Class.forName("com.mysql.cj.jdbc.Driver");
         //2,获取连接对象
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_students", "root", "A3452896431@a");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_students", "root", "");
         //3,获取执行sql语句对象
         Statement statement = connection.createStatement();
         //4,执行sql语句,接收结果

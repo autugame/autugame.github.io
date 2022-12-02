@@ -13,7 +13,7 @@ public class TestJDBC {
         //2,获得连接
         String url = "jdbc:mysql://localhost:3306/db_students";
         String user = "root";
-        String password = "A3452896431@a";
+        String password = "";
         Connection connection = DriverManager.getConnection(url, user, password);
 
         if (connection != null) {

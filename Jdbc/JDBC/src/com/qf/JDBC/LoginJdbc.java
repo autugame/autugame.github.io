@@ -16,7 +16,7 @@ public class LoginJdbc {
 
         Class.forName("com.mysql.cj.jdbc.Driver");
 
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_company", "root", "A3452896431@a");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_company", "root", "");
 
         Statement statement = connection.createStatement();
 

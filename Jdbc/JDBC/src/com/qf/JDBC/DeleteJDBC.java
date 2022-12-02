@@ -9,7 +9,7 @@ public class DeleteJDBC {
         //1，加载驱动
         Class.forName("com.mysql.cj.jdbc.Driver");
         //2，获得连接对象
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_students", "root", "A3452896431@a");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_students", "root", "");
         //3，获得执行sql的对象
         Statement statement = connection.createStatement();
         //4，执行sql语句，并接收结果
