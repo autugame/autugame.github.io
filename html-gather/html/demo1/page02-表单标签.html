@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单标签</title>
+	</head>
+	<body>
+		
+		-文本输入框<input readonly/><input type="text" required placeholder="请输入用户名"/><br/>
+		-密码输入框<input type="password"/><br/>
+		-单选按钮<input type="radio"/><br/>
+		-复选框<input type="checkbox"/><br/>
+		-文本选择框<input type="file"/><br/>
+		-按钮<br/>
+			普通按钮默认是没有文字的，要通过value属性指定按钮文本<br/>
+			普通按钮<input type="button" value="点我呀"/><br/>
+			重置按钮<input type="reset"/><br/>
+			提交按钮<input type="submit"/><br/>
+			图片按钮从功能上讲和提交按钮一致，需要通过src属性指定按钮图片<br/>
+			图片按钮<input type="image" src="images/btn.bmp"/><br/>
+		<!-- 以下input的type是html5新增的效果 要考虑浏览器的兼容性(是否支持) -->
+		<!-- type=number表示此输入框只能输入数字min设置最小值max设置最大值 -->
+		-数组输入框<input type="number" min="10" max="20"/><br/>
+		-日期输入框<input type="date"/><br/>
+		-颜色选择框<input type="color"/><br/>
+		-邮箱输入框<input type="email"/><br/>
+		-电话输入框<input type="tel"/><br/>
+		-搜索输入框<input type="search"/>
+		<hr/>
+		<!-- 单选按钮使用注意事项
+		 1，如果多个单选按钮是同一个主题的选项，则需要提供name属性且name属性必须相同（排他性）
+		 2，单选按钮必须提供value属性，用于提交当前单选按钮选择后提交的值（会在当前按钮被选中时提交）
+		 3，单选按钮可以通过添加checked属性使其默认被选中，如果有多个单选按钮添加checked属性则选择最后一个
+		 -->
+		单选按钮<br/>
+		性别：
+		<br/>
+		男<input type="radio" name="gender" value="M"/>
+		<br/>
+		女<input type="radio" name="gender" value="F"/>
+		<br/>
+		不详<input type="radio" name="gender" value="N" checked/>
+		<hr/>
+		<!-- 复选框注意事项（与单选按钮一致） -->
+		爱好：<br/>
+		篮球<input type="checkbox" name="hobby" value="BB"/>
+		足球<input type="checkbox" name="hobby" value="FB"/>
+		羽毛球<input type="checkbox" name="hobby" value="TB"/>
+		溜溜球<input type="checkbox" name="hobby" value="YY"/>
+		<hr/>
+		<!-- 
+		select标签表示下拉菜单的容器
+			1，multiple属性，设置此下拉菜单多选（ctrl）
+			2，size属性设置下拉列表中可见选项的数目
+		option子标签表示下拉菜单的选项
+			1，option标签中的标签文本用于指定选项显示的文字
+			2，otpion标签需要提供value属性,当选择此菜单时提交到后端
+		 -->
+		<select multiple size="2" disabled>
+			<option value="sichuan">四川</option>
+			<option value="beijing">北京</option>
+			<option value="shanghai">上海</option>
+			<option value="guangzhou">广州</option>
+			<option value="shenzhen">深圳</option>
+			<option value="wuhan">武汉</option>
+		</select>
+		<hr/>
+		<!-- 多行输入框textarea标签
+		 1，rows属性用于指定多行文本框显示的行数
+		 2，cols属性用于设置多行文本输入框每行显示的字符个数(考虑浏览器兼容性)
+		 3，输入框（文本输入框，密码输入框）是通过value属性来设置默认值的，多行输入框是通过标签文本设置默认值的
+		 -->
+		<textarea rows="5" cols="30">这是文本域的默认值</textarea>
+		<form>
+			<input type="text" required/>
+			<input type="submit"/>
+		</form>
+	</body>
+</html>

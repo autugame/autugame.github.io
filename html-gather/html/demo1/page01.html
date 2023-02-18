@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Html常用标签一显示标签</title>
+	</head>
+	<body>
+		<!-- 显示文本 -->
+		<!-- font标签color设置颜色face设置字体size设置大小 -->
+		<font color="red" face="华文行楷" size="7">千峰教育</font>
+		<font color="black" face="华文行楷" size="4">Java涛哥</font>
+		<!-- h5中部推荐font标签显示文本推荐lable标签 -->
+		<!-- lable标签本身没有字体属性，但是可以通过设置style属性值设置字体颜色，大小，样式 -->
+		<br/>
+		<lable style="color:green;font-size:50px;font-family:楷体;">网页设计</lable>
+		<!-- img标签显示图片 -->
+		<!-- src属性用于指定显示图片的路径，可以是网络图片路径也可以是本地图片路径
+			(本地图片，先在项目中创建一个存放图片的目录)
+		width属性设置图片的宽度
+		heigth属性设置图片的高度
+			如果两个属性同时设置可能会改变图片的比例
+				可以只设置其中一个属性，另一个属性会等比例缩放
+		alt属性，用于指定图片无法加载时的替换文本
+		 -->
+		<br/>
+		<img src="http://www.mobiletrain.org/it/images/logo.png"/>
+		<br/>
+		<img src="images/R-C.jfif" width="300" alt="美女"/>
+		<!-- audio标签 表示调用浏览器内置的音频播放器(默认是隐藏的)
+			src属性指定音频的路径(网络路径，本地路径)
+			controls属性表示显示播放器(此属性不需要属性值)
+			autoplay属性表示音乐自动播放(考虑浏览器兼容性)
+		-->
+		<br/>
+		<audio src="meida/obj_wo3DlMOGwrbDjj7DisKw_14096508013_5233_9edf_2978_917dee6d5d22068539c8d792dfd1bc2d.mp3" controls></audio>
+		<!-- vedio标签 表示调用浏览器内置的视频播放器(默认是隐藏的)
+			src属性指定音频的路径(网络路径，本地路径)
+			controls属性表示显示播放器的控制条(此属性不需要属性值)
+			autoplay属性表示视频自动播放(考虑浏览器兼容性)
+			width,height 设置视频播放器的尺寸
+		-->
+		<video src="meida/450794990-1-208.mp4" controls width="800"></video>
+	</body>
+</html>
