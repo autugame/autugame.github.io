@@ -1,0 +1,65 @@
+#container {
+	width: 320px;
+	height: 480px;
+	/* border: 1px solid #f00; */
+	margin: auto;
+	background: url(../imgs/game_bg.jpg);
+	border-radius: 5px;
+	position: relative; /* 让父容器中的HTML布局参考父容器 */
+}
+
+/* 设置记分牌的样式 */
+#fraction {
+	position: absolute;
+	left: 60px;
+	top: 10px;
+	color: yellow;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+/* 设置时间进度条样式 */
+#time {
+	position: absolute;
+	left: 63px;
+	top: 66px;
+	width: 180px;
+	height: 15.5px;
+	background: orangered;
+	border-radius: 8px;
+}
+
+/* 设置按钮div的样式 */
+#startMenu,#overMenu,#reloadMenu {
+	width: 320px;
+	height: 35px;
+	/* border: 1px solid red; */
+	text-align: center;
+	position: absolute;
+	left: 0px;
+	top: 200px;
+}
+
+#reloadMenu {
+	top: 240px;
+}
+
+#overMenu,#reloadMenu {
+	display: none;
+}
+
+/* 设置三个按钮的样式 */
+#start,#over,#reload {
+	width: 100px;
+	height: 35px;
+	border: none;
+	border-radius: 5px;
+	background: orangered;
+	color: white;
+	/* font-weight: bold; */
+	font-size: 16px;
+}
+
+#start:hover,#over:hover,#reload:hover {
+	background: orange;
+}

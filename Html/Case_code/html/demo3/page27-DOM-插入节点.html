@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input id="btn_test" type="button" value="测试创建新节点" onclick="test()"/>
+		<script type="text/javascript">
+			function test(){
+				var imgTag = document.createElement("img");
+				// var srcAttr = document.createAttribute("src");
+				// srcAttr.nodeValue = "./imgs/R-C.jfif";
+				
+				// imgTag.setAttributeNode(srcAttr);
+				imgTag.setAttribute("src", "imgs/R-C.jfif");
+				imgTag.setAttribute("width", "200");
+				imgTag.alt = "图片无法显示";
+				//imgTag.removeAttribute("alt");
+				var body = document.body;
+				//body.appendChild(imgTag);
+				
+				var btnTag = document.getElementById("btn_test");
+				body.insertBefore(imgTag,btnTag);
+			}
+		</script>
+	</body>
+</html>

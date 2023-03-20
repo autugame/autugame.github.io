@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="testFor()">测试For</button>
+		<button onclick="testForIn()">测试ForIn</button>
+		<button onclick="testWhile()">测试While</button>
+		<button onclick="testBreakAndContinue()">测试BreakAndContinue</button>
+		<script type="text/javascript">
+			function testFor() {
+				for (var i=0; i<10; i++){
+					console.log("⭐");
+				}
+			}
+			function testForIn() {
+				var stu = {stuNum:"1001",stuName:"张三",stuGender:"男"}
+				//1,便利对象的属性名,从对象中获取属性值
+				for (v in stu){
+					console.log(v + ":" + stu[v]);
+				}
+				var arr = ["aaa","bbb","ccc"];
+				//遍历数组的索引
+				for (i in arr) {
+					console.log(arr[i]);
+				}
+			}
+			function testWhile(){
+				var i = 0;
+				while (i<10) {
+					console.log("⭐");
+					i++;
+				}
+				//do无论是否成立都会执行一次
+				var j = 0;
+				do {
+					console.log(j);
+					j++;
+				} while(j<10);
+			}
+			function testBreakAndContinue() {
+				for (var i=0; i<10; i++){
+					if (i == 5) {
+						break;
+					}
+					console.log("~~~~" + i);
+				}
+				for (var i=0; i<10; i++){
+					if (i == 5) {
+						continue;
+					}
+					console.log("~~~~" + i);
+				}
+			}
+		</script>
+	</body>
+</html>

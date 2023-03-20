@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#container {
+				border: #F08080 2px solid;
+				width: 400px;
+				height: 300px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<p>hello</p>
+			<p id="p">我是一个图片</p>
+			<p>hello</p>
+		</div>
+		<input id="btn_test" type="button" value="测试创建新节点" onclick="test()"/>
+		<script type="text/javascript">
+			function test(){
+				var imgTag = document.createElement("img");
+				imgTag.src = "imgs/R-C.jfif";
+				imgTag.height = "200";
+				
+				var parentTag = document.getElementById("container");
+				var oldChild = document.getElementById("p");
+				parentTag.replaceChild(imgTag,oldChild);
+			}
+		</script>
+	</body>
+</html>

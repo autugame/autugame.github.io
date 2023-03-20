@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>分列显示</title>
+		<style type="text/css">
+			#container {
+				width: 1000px;
+				height: 3000px;
+				border: #FF0000 solid 1px;
+				margin: 100px auto;/* 设置div容器的外边距上下100pa左右居中 */
+				column-count: 4;/* 设置容器分列的列数 */
+				column-rule: blue 1px dashed ;/* 设置分列显示之后列与列之间的分割线样式 */
+				column-width: 200px;/* 设置分列之后的每列宽度（默认：列宽=容器宽度/列数） */
+				column-gap: 30px;/* 设置列与列之间的空隙 */
+			}
+			img {
+				width: 200px;
+				border-radius: 5px;
+				margin-left: 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<img src="../demo1/images/R-C.jfif"/>
+			<img src="../demo1/images/R-C.jfif"/>
+			<img src="../demo1/images/R-C.jfif"/>
+			<img src="../demo1/images/R-C.jfif"/>
+			<img src="../demo1/images/R-C.jfif"/>
+			<img src="../demo1/images/R-C.jfif"/>
+			<img src="../demo1/images/R-C.jfif"/>
+		</div>
+	</body>
+</html>

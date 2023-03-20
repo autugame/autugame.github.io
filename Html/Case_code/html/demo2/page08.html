@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 未访问的超链接是蓝色的 鼠标按下不放是红色的 访问之后的超链接是紫色的
+			 如何修改超链接不同状态下的样式呢---使用超链接的伪类
+			 */
+			a {
+				text-decoration: none;
+				/*color: gray;  如果使用color设置超链接颜色，则三种状态都是同一种颜色 */
+			}
+			/* a:link 超链接初始状态（未激活） */
+			a:link {
+				color: yellow;
+			}
+			/* a:hover 设置鼠标悬停的样式 */
+			a:hover {
+				colro: green;
+			}
+			/* a:active超链接鼠标点下去时的样式 */
+			a:active {
+				color: blue;
+			}
+			/* a:visited设置超链接的激活状态 */
+			a:visited {
+				color: crimson;
+			}
+			.btnStyle {
+				border: #008B8B 1px solid;
+				border-radius: 3px;
+				whith: 100px;
+				height: 30px;
+				color: #008B8B;
+			}
+			button:hover {
+				background: #008B8B;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="http://www.qfedu.com">千峰教育</a>
+		<button class="btnStyle">测试按钮</button>
+	</body>
+</html>

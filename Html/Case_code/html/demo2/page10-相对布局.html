@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* body标签在浏览器中默认是由边距的，为了让body中的元素可以紧挨者浏览器边缘我们通常对body进行magin和padding设置为0px以消除边距 */
+			body {
+				padding: 0px;
+				margin: 0px;
+			}
+			img {
+				height: 200px;
+				margin: 0px;
+			}
+			/* div块级元素，高度默认和div中内容一样高 宽度默认和父容器一样宽*/
+			div {
+				border: 1px solid green;
+				width: 200px;
+				padding: 0px;
+			}
+			/* 相对布局div有默认位置，相对布局就是参考默认位置的偏移量 */
+			#div2 {
+				position: relative;
+				left: 300px;
+				top: 200px;
+			}
+			#container {
+				width: 1000px;
+				height: 800px;
+				background: yellow;
+				margin: 100px;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="div1">
+				<img src="images/QQ.png"/>
+			</div>
+			<div id="div2">
+				<img src="images/微信.png"/>
+			</div>
+			<div id="div3">
+				<img src="images/支付宝.png"/>
+			</div>
+		</div>
+	</body>
+</html>

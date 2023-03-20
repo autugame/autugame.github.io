@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="userName"/>
+		<br/>
+		<select id="num">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+		</select>
+		<form action="">
+			<input type="text"/>
+			<input type="submit"/>
+			<input type="reset"/>
+		</form>
+		<script type="text/javascript">
+			var userNameInputTag = document.getElementById("userName");
+			
+			userNameInputTag.onfocus = function(){
+				console.log("~~~~~~test1");
+			}
+			userNameInputTag.onblur = function(){
+				console.log("~~~~~~test2");
+			}
+			userNameInputTag.onchange = function(){
+				console.log("~~~~~~test3");
+			}
+			document.getElementById("num").onchange = function(){
+				console.log("~~~~~~test4");
+			}
+			userNameInputTag.onselect = function(){
+				console.log("~~~~~~test5");
+			}
+			document.forms[0].onsubmit = function(){
+				console.log("~~~~~~test6");
+				return false;
+			}
+			document.forms[0].onreset = function(){
+				console.log("~~~~~~test7");
+			}
+		</script>
+	</body>
+</html>

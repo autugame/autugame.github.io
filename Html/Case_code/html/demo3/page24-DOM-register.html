@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="js/form_validate.js"></script>
+	</head>
+	<body>
+		<form action="http://www.qfedu.com" onsubmit="return doValidate()">
+			<fieldset>
+				<legend>用户注册</legend>
+				<p>
+					账号：
+					<input id="userNameInput" type="text" placeholder="请输入用户名"/>
+					<label id="userNameTipsLabel"></label>
+				</p>
+				<p>
+					密码：
+					<input id="userPwdInput" type="password" placeholder="请输入密码"/>
+					<label id="userPwdTipsLabel"></label>
+				</p>
+				<p>
+					确认密码：
+					<input id="rePwdInput" type="password" placeholder="请再次输入密码"/>
+					<label id="rePwdTipsLabel"></label>
+				</p>
+				<p>
+					手机号：
+					<input type="text" placeholder="请输入手机号码"/>
+					<label></label>
+				</p>
+				<p>
+					邮箱：
+					<input type="text" placeholder="请输入邮箱"/>
+					<label></label>
+				</p>
+				<p>
+					<input type="submit" value="提交"/>
+				</p>
+			</fieldset>
+		</form>
+	</body>
+</html>

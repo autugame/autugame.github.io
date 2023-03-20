@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="testWindow()">测试window</button>
+		<script type="text/javascript">
+			function testWindow(){
+				var w = window.open("http://www.qfedu.com","千锋官网","width=400,height=300");
+				
+				//w.resizeTo(800,600);
+				//w.resizeBy(800,600);
+				w.moveTo(200,100);
+				//w.scrollTo(100,300);
+			}
+		</script>
+	</body>
+</html>

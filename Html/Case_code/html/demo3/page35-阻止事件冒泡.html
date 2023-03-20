@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div" style="padding: 50px;width: 100px; height: 100px; background: rgba(255,0,0,0.5);">
+			<button id="btn">测试按钮</button>
+			<img src="imgs/R-C.jfif" height="50"/>
+		</div>
+		<script type="text/javascript">
+			var div = document.getElementById("div");
+			div.onclick = function(){
+				console.log("test1");
+			}
+			var btn = document.getElementById("btn");
+			btn.onclick = function(event){
+				//event.cancelBubble = true;
+				//event.stopPropagation();
+				console.log("test2");
+			}
+			var arr = div.childNodes;
+			console.log(arr[1]);
+			for (var i = 0; i < arr.length; i++) {
+			 	var node = arr[i];
+				console.log(node);
+				if (node.nodeType == 1){
+					node.onclick = function(event){
+						var event = event || window.event;
+						event.cancelBubble = true;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

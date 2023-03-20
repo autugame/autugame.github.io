@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>布局标签</title>
+	</head>
+	<body>
+		<!-- table标签用于在网页中定义一个表格，表格是由若干行组成，行被分割成多个单元格 -->
+		<!-- 表格 table table中的属性设置的是整个表格中的属性
+				border属性：表示设置表格的边框宽度 同时设置表格外边框以及每个单元格的边框
+				cellspacing属性：表示设置单元格的空隙
+				cellpadding属性：设置当前表格中单元格的内边距
+				width属性：设置整个当前表格的宽度
+				height属性：设置整个当前变革的高度
+				align属性：用于设置当前表格在网页中的水平位置 left靠左默认值 right靠右 center居中
+				bgcolor属性：设置表格的背景颜色
+				background属性：设置当前表格的背景图片
+		 -->
+		<!-- 行 tr tablerow 用在table标签里面，一对tr标签就表示表格中的一行 tr的属性设置影响当前行
+				height属性：设置当前行的高度如果不设置行高则平均分配
+				bgcolor属性：设置当前行的背景颜色
+		 -->
+		<!-- 单元格 td tabledata 写在tr标签里面， 一对td标签就表示表格当前行中的一个的单元格 每一行的对应列都会自动对齐
+				width属性：表示设置当前单元格的宽度 设置某一行的单元格宽度其他行对饮单元格宽度同步修改
+				bgcolor属性：表示设置当前单元格的背景颜色
+				valign属性：设置当前单元格中的内容，在当前单元格中的垂直位置 默认值middle top顶部 bottom底部
+				align属性：设置当前单元格中的内容，在当前单元格中的水品位置 left靠左默认值 right靠右 center居中
+				colspan属性：横向合并单元格（设置当前单元格占用几个单元格的宽度）
+				rowspan属性：纵向合并单元格（设置当前单元格占用几行的高度）
+		 -->
+		<table border="1" cellspacing="0" cellpadding="0" width="300" height="300" align="center" bgcolor="yellow">
+			<tr height="50" bgcolor属性：设置当前行的背景颜色="blue">
+				<td colspan="2">1-1</td>
+				<td width="50" rowspan="2">1-3</td>
+			</tr>
+			<tr>
+				<td width="50" rowspan="2">2-1</td>
+				<td valign="bottom" align="center">2-2</td>
+			</tr>
+			<tr height="50">
+				<td colspan="2">3-2</td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="testObj()">创建js对象</button>
+		<button onclick="testObj2()">测试对象2</button>
+		<script type="text/javascript">
+			function testObj(){
+				//创建对象
+				var obj = {
+					id:"101",
+					name:"zhangsan",
+					test1:function(){
+						console.log("test1");
+					}
+				};
+				obj.age = 18;
+				console.log(obj);
+				obj.test1();
+			}
+			//自定义
+			function Student(num,name){
+				this.stuNum = num;
+				this.stuName = name;
+				this.method = function(){
+					console.log("method");
+				}
+			}
+			function testObj2(){
+				Student.prototype.stuGender = "男";
+				var s = new Student("1002","lisi");
+				console.log(s.stuGender);
+				var s2 = new Student("1001","张三");
+				console.log(s2.method());
+			}
+		</script>
+	</body>
+</html>

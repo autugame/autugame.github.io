@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="test1()">测试按钮</button>
+		<button id="btn2">测试按钮</button>
+		<script type="text/javascript">
+			function test1(){
+				console.log("按钮1");
+			}
+			var btn2 = document.getElementById("btn2");
+			btn2.onclick = function(){
+				console.log("按钮2");
+			}
+		</script>
+	</body>
+</html>
