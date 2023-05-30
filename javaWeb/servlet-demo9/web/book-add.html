@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书添加页面</title>
+</head>
+<body>
+    <!--
+    >>>application/x-www-form-urlencoded 在发送前编码所有字符
+    >>>text/plain 将表单数据空格换成+，不对特殊字符进行编码
+    >>>multipart/form-data 不对表单数据进行编码
+    -->
+    <h3>添加图书信息</h3>
+    <form action="BookSaveServlet" method="post" enctype="multipart/form-data">
+        <p>图书编号：<input type="text" name="bookId" /></p>
+        <p>图书名称：<input type="text" name="bookName" /></p>
+        <p>图书封面：<input type="file" name="bookImg" /></p>
+        <p>图书编号：<input type="submit" value="提交" /></p>
+    </form>
+</body>
+</html>

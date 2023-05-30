@@ -1,0 +1,1 @@
+<div style="height: 50px; background-color: lightgreen;">footer</div>
