@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.js"></script>
+	</head>
+	<body>
+		<input type="text" name="name1" class="inputStyle1"/><br/>
+		<input type="text" name="name2" class="inputStyle2"/><br/>
+		<input type="text" name="name3" class="inputStyle1"/><br/>
+		<input type="text" name="name4" class="inputStyle2"/><br/>
+		<input type="text" name="name5" class="inputStyle1"/><br/>
+		<input type="text" name="name6" class="inputStyle2"/><br/>
+		<hr/>
+		<button id="btn">测试</button>
+		<script type="text/javascript">
+			$("#btn").click(function(){
+				// $("input").eq(2).hide();
+				// $("input").each(function(){
+				// 	const r = $(this).hasClass("inputStyle1");
+				// 	console.log(r);
+				// });
+				$("input").filter(".inputStyle1").hide();
+			});
+		</script>
+	</body>
+</html>

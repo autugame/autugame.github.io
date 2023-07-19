@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 引入jQuery -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.js"></script>
+	</head>
+	<body>
+		<input type="text" class="inputStyle"/><br/>
+		<img id="img1" src="imgs/AA1bEZAx.jpeg" height="200"/><br/>
+		<img id="img2" src="imgs/AA1bEZAx.jpeg" height="200"/><br/>
+		<img id="img3" src="imgs/AA1bEZAx.jpeg" height="200"/><br/>
+		<button id="btn">测试</button>
+		<script type="text/javascript">
+			$("#btn");//获取当前文档中ID等于btn的元素返回的是数组结构
+			$(".inputStyle");//获取当前文档中class=inputStyle的元素
+			$("<textarea></textarea>").appendTo("body");
+			//给id=btn的按钮绑定点击事件
+			$("#btn").click(function(){
+				$("img").each(function(){
+					console.log(111);
+				});
+			});
+		</script>
+	</body>
+</html>

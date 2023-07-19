@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.js"></script>
+		<style type="text/css">
+			.style1 {
+				border: 1px red solid;
+			}
+			.style2 {
+				background: orange;
+			}
+			.style3 {
+				width: 200px;
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" id="userName">
+		<img src="imgs/AA1bEZAx.jpeg" width="100"/>
+		<img id="img2"/>
+		<div id="div1" class="style2 style3">hello world</div>
+		<div id="div2" class="style1 style3"></div>
+		<hr/>
+		<button id="btn">测试</button>
+		<script type="text/javascript">
+			$("#btn").click(function(){
+				//为标签的class添加舒心
+				// $("#div1").addClass("style1");
+				//删除元素class属性中指定的样式名
+				// $("#div1").removeClass("style2");
+				//从元素的class属性中可以添加也可以移除样式
+				// $("#div1").toggleClass("style1");
+				
+				$("#div2").text("<img src='imgs/AA1bEZAx.jpeg' height='80'/>");
+				//获取元素属性值
+				//attr获取和设置属性值
+				// var v1 = $("img").attr("src");
+				// var v2 = $("img").attr("width");
+				// // $("img").attr("src", "");
+				// $("img").attr("width", 200);
+				// console.log(v1);
+				// console.log(v2);
+				//val()获取和设置元素的value属性值
+				//设置元素的value值
+				// $("#userName").val("设置的值");
+				//移除元素属性
+				// $("img").removeAttr("width");
+				// $("#img2").attr("src", "imgs/AA1bEZAx.jpeg");
+				// $("#img2").attr("width", "100");
+				// $("#img2").attr("alt", "刷新尝试");
+				//prop同时设置元素的多个属性
+				// $("#img2").prop({width:200, src:"imgs/AA1bEZAx.jpeg", alt:"看不到吗"});
+			});
+		</script>
+	</body>
+</html>
