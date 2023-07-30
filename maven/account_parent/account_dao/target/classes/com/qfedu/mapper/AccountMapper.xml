@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--动态mapper的4个规则:
+    1.mapper namespace的名称和接口的完全路径名一致
+    2.接口的方法名称必须和sql的id一致
+    3.接口方法的返回值类型和sql语句的返回值类型一致
+    4.接口的参数类型和方法的参数类型一致
+-->
+<mapper namespace="com.qfedu.mapper.AccountMapper">
+
+<!--    Transfer in-->
+    <update id="transferIn">
+        update tb_account set money = money + #{money} where name = #{inName}
+    </update>
+
+    <!--    Transfer out-->
+    <update id="transferIn">
+        update tb_account set money = money - #{money} where name = #{outName}
+    </update>
+</mapper>
