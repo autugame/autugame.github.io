@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfedu.dao.DetailDao">
+    <insert id="insertDetail">
+        insert into tb_details(user_addr, user_tel, user_desc, fk_user)
+        values(#{userAddr}, #{userTel}, #{userDesc}, #{fkUser})
+    </insert>
+</mapper>

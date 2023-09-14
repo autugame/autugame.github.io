@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/context/spring-aop.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/context/spring-tx.xsd">
+
+    <context:annotation-config/>
+    <context:component-scan base-package="com.qfedu"/>
+
+    <!--Load property file-->
+    <context:property-placeholder location="classpath:druid.properties"/>
+
+    <!--Relying on the Spring container to create a datasource-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="${druid.driver}"/>
+        <property name="url" value="${druid.url}"/>
+        <property name="username" value="${druid.username}"/>
+        <property name="password" value="${druid.password}"/>
+
+        <property name="initialSize" value="${druid.pool.init}"/>
+        <property name="minIdle" value="${druid.pool.minIdle}"/>
+        <property name="maxActive" value="${druid.pool.maxActive}"/>
+        <property name="maxWait" value="${druid.pool.timeout}"/>
+    </bean>
+
+    <!--Relying on the Sprint container to create factory objects-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mapperLocations" value="classpath:mappers/*Mapper.xml"/>
+        <property name="typeAliasesPackage" value="com.qfedu.pojo"/>
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+    </bean>
+
+    <!--Load all interfaces-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <property name="basePackage" value="com.qfedu.dao"/>
+    </bean>
+
+    <!--Configure Spring transaction management class-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!--Declare transaction management policies through tx tags-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="insert*" isolation="REPEATABLE_READ" propagation="REQUIRED"/>
+            <tx:method name="delete*" isolation="REPEATABLE_READ" propagation="REQUIRED"/>
+            <tx:method name="update*" isolation="REPEATABLE_READ" propagation="REQUIRED"/>
+            <tx:method name="query*" isolation="REPEATABLE_READ" propagation="SUPPORTS"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <aop:config>
+        <aop:pointcut id="crud" expression="execution(* com.qfedu.service.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="crud"/>
+    </aop:config>
+</beans>

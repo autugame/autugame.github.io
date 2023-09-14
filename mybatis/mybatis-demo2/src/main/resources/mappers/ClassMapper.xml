@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfedu.dao.ClassDao">
+    <resultMap id="classMap" type="Classes">
+        <id column="cid" property="classId"/>
+        <result column="cname" property="className"/>
+        <result column="cdesc" property="classDesc"/>
+        <collection property="sList" ofType="Student">
+            <result column="sid" property="stuId"/>
+            <result column="sname" property="stuName"/>
+            <result column="sage" property="stuAge"/>
+            <result column="cid" property="cId"/>
+        </collection>
+    </resultMap>
+
+    <select id="queryClass" resultMap="classMap">
+        select c.cid, c.cname, c.cdesc, s.sid, s.sname, s.sage, s.cid from tb_classes c inner join tb_students s on c.cid=s.cid where c.cid=#{classId}
+    </select>
+</mapper>

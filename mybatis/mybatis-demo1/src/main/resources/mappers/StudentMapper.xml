@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfedu.dao.StudentDao">
+    <insert id="insertStudent" parameterType="com.qfedu.pojo.Student" useGeneratedKeys="true" keyProperty="sid">
+        insert into tb_students(stu_num,stu_name,stu_gender,stu_age)
+        values(#{stuNum},#{stuName},#{stuGender},#{stuAge})
+    </insert>
+    <delete id="deleteStudent">
+        delete from tb_students where stu_num=#{stuNum}
+    </delete>
+    <update id="updateStudent">
+        update tb_students set stu_name=#{stuName},stu_gender=#{stuGender},stu_age=#{stuAge} where stu_num=#{stuNum}
+    </update>
+    <select id="listStudents" resultType="com.qfedu.pojo.Student">
+        select sid sid,stu_num stuNum,stu_name stuName,stu_gender stuGender,stu_age stuAge from tb_students
+    </select>
+    <select id="queryStudent">
+        select sid sid,stu_num stuNum,stu_name stuName,stu_gender stuGender,stu_age stuAge from tb_students where stu_num=#{stuNum}
+    </select>
+    <select id="listStudentsByPage">
+        select sid sid,stu_num stuNum,stu_name stuName,stu_gender stuGender,stu_age stuAge from tb_students limit #{start},#{pageSize}
+    </select>
+    <select id="getCount" resultType="int">
+        select count(1) from tb_students
+    </select>
+    <select id="listStudentsByGender">
+        select sid sid,stu_num stuNum,stu_name stuName,stu_gender stuGender,stu_age stuAge from tb_students where stu_gender=#{gender}
+    </select>
+</mapper>
