@@ -1,5 +1,0 @@
-system.name = EMP Manager System
-input.username = Input UserName
-input.password = Input Password
-login.success = Login Success!
-login.error = Login Error

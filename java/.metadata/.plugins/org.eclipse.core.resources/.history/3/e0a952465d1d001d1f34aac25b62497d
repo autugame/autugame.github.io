@@ -1,5 +1,0 @@
-package com.autuo;
-
-public class Course {
-	private String cname;
-}

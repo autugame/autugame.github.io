@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;info_zh_CN.properties&apos; to &apos;info_zh_CN.properties&apos;&#x0D;&#x0A;- Original project: &apos;I18NDemo&apos;&#x0D;&#x0A;- Destination element: &apos;info_zh_CN.properties&apos;&#x0D;&#x0A;- Original element: &apos;info_zh_CN.properties&apos;" description="Copy file" element1="src/com/autuo/info_zh_CN.properties" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1656866308779" target="/I18NDemo/src/com/autuo/info_zh_CN.properties" units="0" version="1.0"/>
-</session>

@@ -1,9 +1,0 @@
-package com.autuo;
-
-public class ObjectStreamDemo {
-	
-	public static void main(String[] args) {
-		
-	}
-	
-}

@@ -1,8 +1,0 @@
-/* 样式表定义在style文件中时无需定义style标签 */
-.btnStyle {
-				width: 200px;
-				height: 35px;
-				border: none;
-				background-color: lightgray;
-				border-radius: 5px;
-			}
