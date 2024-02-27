@@ -14,7 +14,6 @@
 </head>
 	<body>
 		<div id="container">
-			<el-skeleton :rows="6" animated :loading="loading"/>
 			<div class="common-layout">
 				<el-container>
 					<el-header>
@@ -46,7 +45,6 @@
 		data() {
 			return {
 				activeIndex: "1",
-				loading: true,
 				src: "html/home.html"
 			}
 		},
@@ -70,7 +68,4 @@
 		}
 	};
 	var vue = Vue.createApp(app).use(ElementPlus).mount("#container");
-	Vue.nextTick(() => {
-		vue.loading = false;
-	});
 </script>
