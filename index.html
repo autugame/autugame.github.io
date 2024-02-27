@@ -1,84 +1,76 @@
+
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>website</title>
-	<style type="text/css">
-		body {
-			margin: 0;
-			padding: 0;
-		}
-		
-		ul {
-		    list-style-type: none;
-		    margin: 0;
-		    padding: 0;
-		    overflow: hidden;
-		    background-color: #333;
-		}
-		
-		li {
-		    float: left;
-		}
-		
-		li a {
-		    display: block;
-		    color: white;
-		    text-align: center;
-		    padding: 14px 16px;
-		    text-decoration: none;
-		}
-		
-		li a:hover:not(.active) {
-		    background-color: #111;
-		}
-		
-		.active {
-		    background-color: #4CAF50;
-		}
-		
-		main {
-			width: 100%;
-			height: 810px;
-			background: url(images/IMG_202311239033_1920x1080.jpg);
-		}
-		
-		footer {
-			width: 100%;
-			height: 99px;
-			background: #333;
-		}
-		.copyright {
-			text-align: center;
-			line-height: 99px;
-			color: yellow;
-		}
-	</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>website</title>
+	<!-- Import style -->
+	<link rel="stylesheet" href="element-plus/index.css"/>
+	<!-- Import Vue 3 -->
+	<script src="element-plus/vue@3.js"></script>
+	<!-- Import component library -->
+	<script src="element-plus/element-plus.js"></script>
 </head>
-<body>
-	<header>
-		<ul>
-		  <li><a class="active" href="#home">主页</a></li>
-		  <li><a href="http://autumnwater.mikecrm.com/rVSDMUy">反馈</a></li>
-		  <li><a href="./html/relation.html">联系</a></li>
-		  <li><a href="./html/about_us.html">关于</a></li>
-		</ul>
-	</header>
-	<main>
-		<div style="position: absolute; top: 200px; left: 300px;">
-			<img width="250" src="https://resources.jetbrains.com/storage/products/company/brand/logos/AppCode.svg"/>
-			<br/>
-			<p style="width: 250px;">在这里感谢jetbrains提供了用于非商业开发的IDEA，让我能供用正版的IDEA开发Java程序</p>
-			<div style="margin-top: 50px; text-align: center;">
-				<a style="background: deepskyblue; color: white; padding: 10px 30px; text-decoration: none; border-radius: 50px;" href="https://jb.gg/OpenSourceSupport">前往JetBranins</a>
+	<body>
+		<div id="container">
+			<el-skeleton :rows="6" animated :loading="loading"/>
+			<div class="common-layout">
+				<el-container>
+					<el-header>
+						<el-menu
+							:default-active="activeIndex"
+							class="el-menu-demo"
+							mode="horizontal"
+						>
+							<el-menu-item index="1" @Click="changeElMain(1)">Home</el-menu-item>
+							<el-menu-item index="2" @Click="changeElMain(2)">feedback</el-menu-item>
+							<el-menu-item index="3" @Click="changeElMain(3)">contact</el-menu-item>
+							<el-menu-item index="4" @Click="changeElMain(4)">concerning</el-menu-item>
+						</el-menu>
+					</el-header>
+					<el-main>
+						<iframe name="main" frameborder="0" style="width: 100%; height: 770px;" :src="src"></iframe>
+					</el-main>
+					<el-footer style="margin: 0 auto;">
+						<el-text class="mx-1" type="warning">Copyright © 2020 - 2023 Autumn. All Rights Reserved</el-text>
+					</el-footer>
+				</el-container>
 			</div>
 		</div>
-	</main>
-	<footer>
-		<div class="copyright">
-			Copyright © 2020 - 2023 Autumn. All Rights Reserved
-		</div>
-	</footer>
-</body>
+	</body>
 </html>
+
+<script type="text/javascript">
+	const app = {
+		data() {
+			return {
+				activeIndex: "1",
+				loading: true,
+				src: "html/home.html"
+			}
+		},
+		methods: {
+			changeElMain(index) {
+				switch(index) {
+					case 1:
+						this.src = "html/home.html";
+					break;
+					case 2:
+						this.src = "http://autumnwater.mikecrm.com/rVSDMUy";
+					break;
+					case 3:
+						this.src = "html/contact.html";
+					break;
+					case 4:
+						this.src = "html/concerning.html";
+					break;
+				} 
+			}
+		}
+	};
+	var vue = Vue.createApp(app).use(ElementPlus).mount("#container");
+	Vue.nextTick(() => {
+		vue.loading = false;
+	});
+</script>
