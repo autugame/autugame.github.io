@@ -1,50 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>concerning</title>
-    <style>
-        li {
-		    float: left;
-		}
-        div img:hover {
-			width: 250px;
-			transition:width 2s;
-		}
-        div img {
-			width: 200px;
-			transition:width 2s;
-		}
-        div {
-			text-align: center;
-			height: 250px;
-			float: left;
-			margin-left: 50px;
-			position: relative;
-			top: 300px;
-			left: 435px;
-		}
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>website</title>
+	<link rel="stylesheet" href="../js/bootstrap.min.css"/>
+	<!-- Import Vue 3 -->
+	<script src="../js/element-plus/vue@3.js"></script>
+	<script src="../js/axios.min.js"></script>
+	<script src="../js/bootstrap.bundle.min.js"></script>
 </head>
-<body style="background: url(../images/IMG_202311239033_1920x1080.jpg);">
-    <div>
-        <a style="text-decoration: none; color: #111;" href="https://blog.csdn.net/qiushuiyouxi?spm=1010.2135.3001.5343" target="_blank">
-            <img src="../images/QQ图片20220417124446.jpg"/>
-            <p>autumnwater</p>
-        </a>
-    </div>
-    <div>
-        <img src="../images/QQ图片20220423201258.jpg"/>
-        <p>带土</p>
-    </div>
-    <div>
-        <img src="../images/b_264949375c9672aeeb8428886fd36065.jpg"/>
-        <p>凪。</p>
-    </div>
-    <div>
-        <img src="../images/b_62048d39e6e6074820cc74830ee2c08c.jpg"/>
-        <p>此心安處是吾鄉</p>
-    </div>
-</body>
+	<body>
+		<div id="container" style="padding: 200px;">
+			<div v-for="info in qqInfo">
+				<div class="card" style="width: 18rem; float: left; margin-left: 40px;">
+				  <img :src="info.Image" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">{{info.name}}</h5>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
+
+<script type="text/javascript">
+	const app = {
+		data() {
+			return {
+				qqNumbers:
+				[
+					3452896431,
+					2033849155,
+					2231131660,
+					1243103856
+				],
+				qqInfo: []
+			}
+		},
+		created()
+		{
+			for (var i = 0; i < this.qqNumbers.length; i++)
+			{
+				var getQQName = "https://api.oioweb.cn/api/qq/info?qq=" + this.qqNumbers[i];
+				axios(
+					{
+						url: getQQName,
+						method: "get"
+					}
+				).then((response) =>
+					{
+						var qqImagesUrl = "https://q.qlogo.cn/headimg_dl?dst_uin=" + response.data.result.user_id + "&spec=640&img_type=jpg"
+						var nickname = response.data.result.nickname;
+						var qqInfo = 
+						{
+							Image: qqImagesUrl,
+							name: nickname
+						};
+						this.qqInfo.push(qqInfo);
+					}
+				);
+			}
+			console.log(this.qqInfo);
+		}
+	};
+	var vue = Vue.createApp(app).mount("#container");
+</script>
