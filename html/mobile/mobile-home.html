@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>mobile-hoem</title>
+		<!-- import style -->
+		<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/vant@4/lib/index.css"/>
+		
+		<!-- import script -->
+		<script src="../../js/element-plus/vue@3.js"></script>
+		<script src="https://fastly.jsdelivr.net/npm/vant@4/lib/vant.min.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<van-tabbar v-model="active">
+			  <van-tabbar-item icon="home-o">Tab</van-tabbar-item>
+			  <van-tabbar-item icon="search">Tab</van-tabbar-item>
+			  <van-tabbar-item icon="friends-o">Tab</van-tabbar-item>
+			  <van-tabbar-item icon="setting-o">Tab</van-tabbar-item>
+			</van-tabbar>
+
+		</div>
+	</body>
+</html>
+
+<script type="text/javascript">
+	const app = 
+	{
+		data() 
+		{
+			return 
+			{
+				
+			}
+		}
+	};
+	var vue = Vue.createApp(app).use(vant).mount("#container");
+</script>

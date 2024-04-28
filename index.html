@@ -64,6 +64,12 @@
 					break;
 				} 
 			}
+		},
+		created()
+		{
+			if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+				window.location.href = "./html/mobile/mobile-home.html";
+			}
 		}
 	};
 	var vue = Vue.createApp(app).use(ElementPlus).mount("#container");
