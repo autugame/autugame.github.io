@@ -16,10 +16,10 @@
 			<van-notice-bar left-icon="volume-o" text="欢迎各位来到这个网站,这个网站是作为手机端的网站,以后不会打开电脑端网站."></van-notice-bar>
 			<van-swipe :autoplay="3000" lazy-render>
 				<van-swipe-item v-for="image in images">
-					<img :src="image" width="412" height="238"/>
+					<img :src="image" width="400" height="238"/>
 				</van-swipe-item>
 			</van-swipe>
-			<van-tabbar>
+			<van-tabbar @change="OnChange">
 			  <van-tabbar-item icon="home-o">Home</van-tabbar-item>
 			  <van-tabbar-item icon="phone-o">contact</van-tabbar-item>
 			  <van-tabbar-item icon="info-o">About</van-tabbar-item>
@@ -41,6 +41,16 @@
 					"../../images/IMG_202404292748_424x238.jpg",
 					"../../images/qrcode_for_group.png"
 				]
+			}
+		},
+		methods: 
+		{
+			OnChange(number)
+			{
+				switch () 
+				{
+					
+				}
 			}
 		}
 	};
