@@ -14,7 +14,7 @@
 	<body>
 		<div id="container">
 			<van-notice-bar left-icon="volume-o" text="欢迎各位来到这个网站,这个网站是作为手机端的网站,以后不会打开电脑端网站."></van-notice-bar>
-			<van-swipe :autoplay="3000" lazy-render style="margin-left: 6px;">
+			<van-swipe :autoplay="3000" lazy-render>
 				<van-swipe-item v-for="image in images">
 					<img :src="image" width="400" height="238"/>
 				</van-swipe-item>
@@ -47,7 +47,21 @@
 		{
 			OnChange(number)
 			{
-				
+				switch (number)
+				{
+					case 0:
+						window.location.href = "mobile-home.html";
+						break;
+					case 1:
+						window.location.href = "mobile-home.html";
+						break;
+					case 2:
+						window.location.href = "mobile-home.html";
+						break;
+					case 3:
+						window.location.href = "mobile-home.html";
+						break;
+				}
 			}
 		}
 	};
