@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<title>mobile-hoem</title>
+		<title>mobile-about</title>
 		<!-- import style -->
 		<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/vant@4/lib/index.css"/>
 		
@@ -12,13 +12,10 @@
 		<script src="https://fastly.jsdelivr.net/npm/vant@4/lib/vant.min.js"></script>
 	</head>
 	<body>
+	<body>
 		<div id="container">
-			<van-notice-bar left-icon="volume-o" text="欢迎各位来到这个网站,这个网站是作为手机端的网站,以后不会打开电脑端网站."></van-notice-bar>
-			<van-swipe :autoplay="3000" lazy-render>
-				<van-swipe-item v-for="image in images">
-					<img :src="image" height="238"/>
-				</van-swipe-item>
-			</van-swipe>
+			<van-empty description="未开发" />
+			
 			<van-tabbar @change="OnChange" v-model="active">
 			  <van-tabbar-item icon="home-o">Home</van-tabbar-item>
 			  <van-tabbar-item icon="phone-o">contact</van-tabbar-item>
@@ -35,12 +32,7 @@
 		data() 
 		{
 			return {
-				active: 0,
-				images: 
-				[
-					"../../images/IMG_202404292748_424x238.jpg",
-					"../../images/qrcode_for_group.png"
-				]
+				active: 2
 			}
 		},
 		methods: 
