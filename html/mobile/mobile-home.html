@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<title>mobile-hoem</title>
 		<!-- import style -->
 		<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/vant@4/lib/index.css"/>
@@ -12,13 +13,19 @@
 	</head>
 	<body>
 		<div id="container">
-			<van-tabbar v-model="active">
-			  <van-tabbar-item icon="home-o">Tab</van-tabbar-item>
-			  <van-tabbar-item icon="search">Tab</van-tabbar-item>
-			  <van-tabbar-item icon="friends-o">Tab</van-tabbar-item>
-			  <van-tabbar-item icon="setting-o">Tab</van-tabbar-item>
+			<van-notice-bar left-icon="volume-o" text="欢迎各位来到这个网站,这个网站是作为手机端的网站,以后不会打开电脑端网站."></van-notice-bar>
+			<van-swipe class="my-swipe" autoplay="3000" indicator-color="white">
+				<van-swipe-item>1</van-swipe-item>
+				<van-swipe-item>2</van-swipe-item>
+				<van-swipe-item>3</van-swipe-item>
+				<van-swipe-item>4</van-swipe-item>
+			</van-swipe>
+			<van-tabbar>
+			  <van-tabbar-item icon="home-o">Home</van-tabbar-item>
+			  <van-tabbar-item icon="phone-o">contact</van-tabbar-item>
+			  <van-tabbar-item icon="info-o">About</van-tabbar-item>
+			  <van-tabbar-item icon="more-o">More</van-tabbar-item>
 			</van-tabbar>
-
 		</div>
 	</body>
 </html>
