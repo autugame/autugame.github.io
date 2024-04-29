@@ -13,8 +13,13 @@
 	</head>
 	<body>
 		<div id="container">
-			<van-empty description="未开发" />
-			
+			<van-cell-group inset>
+				<van-cell title="联系" value="qq群"  size="large"></van-cell>
+			</van-cell-group>
+			<img src="../../images/qrcode_1700732325682.jpg" :width="width"/>
+			<div style="text-align: center;">
+				<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=R9ThfgiexffX8Z7ook_5r30oNTuePXor&jump_from=webapi&authKey=rXdxrO4c30lRZu6XgVjC8US40kXySGaYGC1YM38/93IlhGGTPsWqmZnbL6NU1Y3H"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="秋水程序设计交流" title="秋水程序设计交流"></a>
+			</div>
 			<van-tabbar @change="OnChange" v-model="active">
 			  <van-tabbar-item icon="home-o">Home</van-tabbar-item>
 			  <van-tabbar-item icon="phone-o">contact</van-tabbar-item>
@@ -31,7 +36,8 @@
 		data() 
 		{
 			return {
-				active: 1
+				active: 1,
+				width: 0
 			}
 		},
 		methods: 
@@ -54,6 +60,10 @@
 						break;
 				}
 			}
+		},
+		created()
+		{
+			this.width = document.documentElement.clientWidth;
 		}
 	};
 	var vue = Vue.createApp(app).use(vant).mount("#container");

@@ -10,11 +10,16 @@
 		<!-- import script -->
 		<script src="../../js/element-plus/vue@3.js"></script>
 		<script src="https://fastly.jsdelivr.net/npm/vant@4/lib/vant.min.js"></script>
+		
+		<script src="../../js/axios.min.js"></script>
 	</head>
 	<body>
 	<body>
 		<div id="container">
-			<van-empty description="未开发" />
+			<van-nav-bar title="关于"></van-nav-bar>
+			<div v-for="info in qqInfo">
+				<van-card desc="一个懒人~~~" :title="info.name" :thumb="info.Image"></van-card>
+			</div>
 			
 			<van-tabbar @change="OnChange" v-model="active">
 			  <van-tabbar-item icon="home-o">Home</van-tabbar-item>
@@ -32,7 +37,15 @@
 		data() 
 		{
 			return {
-				active: 2
+				active: 2,
+				qqNumbers:
+				[
+					3452896431,
+					2033849155,
+					2231131660,
+					1243103856
+				],
+				qqInfo: []
 			}
 		},
 		methods: 
@@ -54,6 +67,30 @@
 						window.location.href = "mobile-more.html";
 						break;
 				}
+			}
+		},
+		created()
+		{
+			for (var i = 0; i < this.qqNumbers.length; i++)
+			{
+				var getQQName = "https://api.oioweb.cn/api/qq/info?qq=" + this.qqNumbers[i];
+				axios(
+					{
+						url: getQQName,
+						method: "get"
+					}
+				).then((response) =>
+					{
+						var qqImagesUrl = "https://q.qlogo.cn/headimg_dl?dst_uin=" + response.data.result.user_id + "&spec=640&img_type=jpg"
+						var nickname = response.data.result.nickname;
+						var qqInfo = 
+						{
+							Image: qqImagesUrl,
+							name: nickname
+						};
+						this.qqInfo.push(qqInfo);
+					}
+				);
 			}
 		}
 	};
