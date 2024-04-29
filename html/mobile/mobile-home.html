@@ -16,7 +16,7 @@
 			<van-notice-bar left-icon="volume-o" text="欢迎各位来到这个网站,这个网站是作为手机端的网站,以后不会打开电脑端网站."></van-notice-bar>
 			<van-swipe :autoplay="3000" lazy-render>
 				<van-swipe-item v-for="image in images">
-					<img :src="image" height="238"/>
+					<img :src="image" :width="width" height="238"/>
 				</van-swipe-item>
 			</van-swipe>
 			<van-tabbar @change="OnChange" v-model="active">
@@ -40,7 +40,8 @@
 				[
 					"../../images/IMG_202404292748_424x238.jpg",
 					"../../images/qrcode_for_group.png"
-				]
+				],
+				width: 0
 			}
 		},
 		methods: 
@@ -63,6 +64,10 @@
 						break;
 				}
 			}
+		},
+		created()
+		{
+			this.width = document.documentElement.clientWidth;
 		}
 	};
 	var vue = Vue.createApp(app).use(vant).mount("#container");
