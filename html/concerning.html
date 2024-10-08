@@ -42,7 +42,7 @@
 		{
 			for (var i = 0; i < this.qqNumbers.length; i++)
 			{
-				var getQQName = "https://api.oioweb.cn/api/qq/info?qq=" + this.qqNumbers[i];
+				var getQQName = "https://api.usuuu.com/qq/" + this.qqNumbers[i];
 				axios(
 					{
 						url: getQQName,
@@ -50,8 +50,8 @@
 					}
 				).then((response) =>
 					{
-						var qqImagesUrl = "https://q.qlogo.cn/headimg_dl?dst_uin=" + response.data.result.user_id + "&spec=640&img_type=jpg"
-						var nickname = response.data.result.nickname;
+						var qqImagesUrl = "https://q.qlogo.cn/headimg_dl?dst_uin=" + response.data.data.email.split("@", 1) + "&spec=640&img_type=jpg";
+						var nickname = response.data.data.name;
 						var qqInfo = 
 						{
 							Image: qqImagesUrl,
